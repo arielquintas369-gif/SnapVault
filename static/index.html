@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnapVault</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel">
+        <div class="header">
+          <div>
+            <p class="eyebrow">Upload rápido</p>
+            <h1>SnapVault</h1>
+          </div>
+        </div>
+
+        <div id="dropzone" class="dropzone" tabindex="0" aria-label="Área de upload">
+          <input id="fileInput" type="file" accept="image/*" hidden />
+          <div class="dropzone-content">
+            <div class="icon">⬆</div>
+            <p><strong>Arraste uma imagem</strong> ou clique para selecionar</p>
+            <span>PNG, JPG, WEBP</span>
+          </div>
+        </div>
+
+        <div class="url-box">
+          <label for="imageUrl">URL direta da imagem</label>
+          <div class="input-row">
+            <input id="imageUrl" type="url" placeholder="https://exemplo.com/imagem.png" />
+            <button id="btnUseUrl" class="secondary-btn" type="button">Usar URL</button>
+          </div>
+        </div>
+
+        <button id="uploadBtn" class="primary-btn" type="button">Fazer Upload</button>
+
+        <div id="status" class="status" aria-live="polite"></div>
+
+        <div id="resultBox" class="result-box hidden">
+          <label>URL da imagem</label>
+          <div class="result-row">
+            <input id="resultUrl" type="text" readonly />
+            <button id="copyBtn" class="secondary-btn" type="button">Copiar</button>
+          </div>
+          <a id="previewLink" href="#" target="_blank" rel="noreferrer">Abrir imagem</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
